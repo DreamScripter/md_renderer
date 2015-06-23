@@ -1,0 +1,2 @@
+http://emacsredux.com/
+http://wiki.blender.org/index.php/Dev:Ref/Release_Notes/2.75/BGE
