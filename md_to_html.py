@@ -6,7 +6,8 @@ base_path = os.path.join("C:\\Documents and Settings\\Administrador\\DATOS\\docu
 base_path_html = base_path + '-html'
 project_path = os.path.join("C:\\Documents and Settings\\Administrador\\DATOS\\scripts\\python\\md_renderer")
 # unix_type_project_path = project_path.replace('\\', '/')
-html_header = '<head><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="./style.css"></head>'
+html_header = '<html><head><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="./style.css"></head><body><div id="main">'
+html_footer = '</div></body></html>'
 
 os.chdir(base_path)
 
@@ -33,3 +34,7 @@ for path, dirs, files in os.walk("."):
                 content = f.read()
                 f.seek(0, 0)
                 f.write(html_header.rstrip('\r\n') + '\n' + content)
+
+            # add footer to html file
+            with open(rendered_file, 'a') as f:
+                f.write(html_footer.rstrip('\r\n') + '\n')

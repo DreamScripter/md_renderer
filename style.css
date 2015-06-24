@@ -2,6 +2,19 @@ body {
     font-family: arial;
 }
 
+div#main {
+    clear: both;
+    background: #fff;
+    color: inherit;
+    border: 1px solid #eee;
+    box-shadow: 0 0 .5em #999;
+    border-radius: 2px;
+    padding: 1.556em 2em 2em;
+    margin-bottom: .5em;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
 code {
     font-family: monospace;
     overflow: scroll;
