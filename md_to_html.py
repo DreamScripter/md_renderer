@@ -26,7 +26,8 @@ for path, dirs, files in os.walk("."):
         if filename.endswith(('md')):
             file_without_ext, ext = os.path.splitext(filename)
             rendered_file = dir_html + '\\' + file_without_ext + '.html'
-            html =  markdown.markdownFromFile(filename, output=rendered_file)
+            file_with_rel_path = os.path.join(path, filename)
+            html =  markdown.markdownFromFile(file_with_rel_path, output=rendered_file)
 
             # add header to html file
             with open(rendered_file, 'r+') as f:
